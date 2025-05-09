@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کلینیک شنوایی شهرام</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(to bottom right, #f2f4f8, #ffffff);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #ffffff;
+    }
+
+    header {
+      background-color: #001f3f;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      animation: zoomIn 1.5s ease-out;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6px);
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .hero-card img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .map-contact-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+      animation: slideUp 2s ease-in-out;
+    }
+
+    .map-contact-section iframe {
+      width: 500px;
+      height: 350px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-box {
+      background-color: #001f3f;
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-box h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <header>
+    کلینیک شنوایی‌سنجی و سمعک شهرام
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <img src="2ztw5VL.jpeg" alt="Shahram Audiometry Clinic">
+    </div>
+  </section>
+
+  <section class="map-contact-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.2261110154486!2d51.403934511695546!3d35.720657272460144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e013911a10d9d%3A0x263ff8cd0596a76b!2sShahram%20Hospital!5e0!3m2!1sen!2sae!4v1746785159988!5m2!1sen!2sae" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="contact-box">
+      <h2>تماس با ما</h2>
+      <p>شماره تماس ۱: <strong>+989904755345</strong></p>
+      <p>شماره تماس ۲: <strong>+989937885148</strong></p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("particles-js", {
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 60 },
+        shape: {
+          type: "image",
+          options: {
+            image: [
+              { src: "hearing-aid.png", width: 32, height: 32 },
+              { src: "icon2.png", width: 32, height: 32 },
+              { src: "icon3.png", width: 32, height: 32 }
+            ]
+          }
+        },
+        opacity: { value: 0.2 },
+        size: { value: 20, random: true },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: "none",
+          outModes: { default: "out" }
+        }
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          onClick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 80 },
+          push: { quantity: 2 }
+        }
+      },
+      detectRetina: true
+    });
+  </script>
+
+</body>
+</html>
